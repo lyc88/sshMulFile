@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'
+        'http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping>
+    <class name="com.metadata.bean.Data" table="data">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String" column="name"> </property>
+        <property name="description" type="java.lang.String" column="description"></property>
+        <set name="files" table="datafile" inverse="true" lazy="false">
+            <key><column name="dataId"></column></key>
+            <one-to-many class="com.metadata.bean.DataFile" />
+        </set>
+    </class>
+</hibernate-mapping>
+

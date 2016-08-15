@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'
+        'http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping>
+    <class name="com.metadata.bean.DataFile" table="datafile">
+        <id name="id">
+            <generator class="native" />
+        </id>
+        <property name="fileName" type="java.lang.String" column="fileName">
+        </property>
+        <property name="filePath" type="java.lang.String" column="filePath"></property>
+        <property name="dataId" type="java.lang.Integer" column="dataId"></property>
+    </class>
+</hibernate-mapping>
+

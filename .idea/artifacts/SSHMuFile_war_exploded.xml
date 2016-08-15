@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SSHMuFile:war exploded">
+    <output-path>$PROJECT_DIR$/target/artifacts/SSHMuFile_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SSHMuFile" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jars" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="SSHMuFile/web/Web" />
+    </root>
+  </artifact>
+</component>

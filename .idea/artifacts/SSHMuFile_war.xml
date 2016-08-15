@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSHMuFile:war">
+    <output-path>$PROJECT_DIR$/target/artifacts/SSHMuFile_war</output-path>
+    <root id="archive" name="SSHMuFile_war.war">
+      <element id="artifact" artifact-name="SSHMuFile:war exploded" />
+    </root>
+  </artifact>
+</component>
