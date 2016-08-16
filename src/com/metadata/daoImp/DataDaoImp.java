@@ -4,6 +4,7 @@ import com.metadata.bean.Data;
 import com.metadata.dao.DataDao;
 import com.metadata.utils.BaseImpl;
 import com.metadata.utils.BaseQueryModel;
+import com.metadata.utils.Page;
 import com.metadata.utils.PageModel;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
@@ -51,5 +52,18 @@ public class DataDaoImp extends BaseImpl<Data> implements DataDao{
         pm.setDatas(data);
 
         return pm;
+    }
+
+    @Override
+    public Page getPage(String action, String formId, Integer target, String total) {
+        Page page = new Page();
+        String sql = "select count(id) from Data";
+        Long lon = (Long) getSession().createQuery(sql).uniqueResult();
+        //List list = getSession().createQuery("from Data").setFirstResult((pageNum-1)*pageCount).setMaxResults(pageCount).list();
+        page.setCount(lon);
+        page.setFormAction(action);
+        page.setFormId(formId);
+        page.setTargetPage(target);
+        return page;
     }
 }

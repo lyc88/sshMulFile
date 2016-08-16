@@ -6,6 +6,7 @@ import com.metadata.servicesImp.DataFileSevicesImp;
 import com.metadata.sevice.DataFileSevices;
 import com.metadata.sevice.DataSevices;
 import com.metadata.utils.BaseAction;
+import com.metadata.utils.Page;
 import com.metadata.utils.PageModel;
 import com.sun.deploy.net.HttpResponse;
 import com.sun.deploy.net.URLEncoder;
@@ -110,6 +111,20 @@ public class DataAction extends BaseAction {
         PageModel pm = dataSevices.getPageModel(pageNum,pageCount);
         getRequest().setAttribute("pageModel",pm);
 
+        return SUCCESS;
+    }
+
+    public String listPage1(){
+        String targetPage = getRequest().getParameter("targetPage");
+        if(null ==targetPage || targetPage.equals("")){
+            targetPage = "1";
+        }
+        Page page = dataSevices.getPage("listPage1.action","formId",Integer.valueOf(targetPage),null);
+        getRequest().setAttribute("page1",page.getBootstrapPage());
+        getRequest().setAttribute("page2",page.getAjaxPageMenu());
+        getRequest().setAttribute("page3",page.getPageMenu());
+        getRequest().setAttribute("page4",page.getSimplePageMenu());
+        //page.getSimplePageMenu();
         return SUCCESS;
     }
 

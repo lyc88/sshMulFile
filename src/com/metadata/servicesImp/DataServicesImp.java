@@ -4,6 +4,7 @@ import com.metadata.bean.Data;
 import com.metadata.dao.DataDao;
 import com.metadata.sevice.DataSevices;
 import com.metadata.utils.BaseQueryModel;
+import com.metadata.utils.Page;
 import com.metadata.utils.PageModel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -66,5 +67,10 @@ public class DataServicesImp implements DataSevices {
         PageModel pm = new PageModel();
 
         return dataDao.getPageModel(pageNum,pageCount);
+    }
+
+    @Override
+    public Page getPage(String action, String formId, Integer target, String total) {
+        return dataDao.getPage(action,formId,target,total);
     }
 }

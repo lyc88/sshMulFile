@@ -20,6 +20,10 @@
         <result name="success">/listPage.jsp</result>
     </action>
 
+    <action name="listPage1" class="dataAction" method="listPage1" >
+        <result name="success">/listPage1.jsp</result>
+    </action>
+
 </package>
 
 </struts>

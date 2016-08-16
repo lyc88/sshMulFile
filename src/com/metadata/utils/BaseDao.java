@@ -18,4 +18,5 @@ public interface BaseDao<T> {
 	public List<T> getAll(BaseQueryModel qm, Integer pageNum, Integer pageCount);
 
 	public Integer getCount(BaseQueryModel qm);
+
 }
