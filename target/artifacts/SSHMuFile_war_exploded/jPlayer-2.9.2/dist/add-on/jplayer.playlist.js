@@ -253,7 +253,7 @@
 
 			// Create remove control
 			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.removeItemClass + "'>&times;</a>";
-
+ 			//
 			// Create links to free media
 			if(media.free) {
 				var first = true;
@@ -270,10 +270,10 @@
 				});
 				listItem += ")</span>";
 			}
-
+            debugger;
 			// The title is given next in the HTML otherwise the float:right on the free media corrupts in IE6/7
 			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.itemClass + "' tabindex='0'>" + media.title + (media.artist ? " <span class='jp-artist'>by " + media.artist + "</span>" : "") + "</a>";
-			listItem += "</div></li>";
+			listItem += "</div><div>"+"<a href='"+"/servlet/Down?path="+media.mp3+"&fileName="+media.title+"'>xiaozai"+"</a> </div> </li>";
 
 			return listItem;
 		},

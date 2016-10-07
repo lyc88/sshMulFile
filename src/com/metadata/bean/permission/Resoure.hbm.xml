@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'
+        'http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd'>
+<hibernate-mapping>
+    <class name="com.metadata.bean.permission.Resoure" table="resource">
+        <id name="resoureId">
+            <generator class="uuid.hex" />
+        </id>
+        <property name="resoureName" type="java.lang.String" column="resoureName"> </property>
+        <property name="resoureUrl" type="java.lang.String" column="resoureUrl"> </property>
+    </class>
+</hibernate-mapping>
+

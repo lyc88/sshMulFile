@@ -62,17 +62,6 @@ public class BaseAction  extends ActionSupport{
 	protected HttpServletResponse getResponse(){
 		return ServletActionContext.getResponse();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

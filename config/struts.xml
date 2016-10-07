@@ -25,5 +25,5 @@
     </action>
 
 </package>
-
+<include file="userManager.xml"/>
 </struts>

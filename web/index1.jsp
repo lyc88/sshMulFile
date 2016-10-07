@@ -16,7 +16,7 @@
     <link href="/jPlayer-2.9.2/dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css"/>
    <%-- <script type="text/javascript" src="/jPlayer-2.9.2/lib/jquery.min.js"></script>--%>
    <script type="text/javascript" src="/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="/jPlayer-2.9.2/dist/add-on/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="/jPlayer-2.9.2/dist/add-on/jplayer.playlist.js"></script>
    <script type="text/javascript">
 
        /*$(function() {
